@@ -1,0 +1,893 @@
+nohup: ignoring input
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 18 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+[04/Aug/2024 15:48:43] "GET / HTTP/1.1" 200 4144
+[04/Aug/2024 15:48:49] "GET / HTTP/1.1" 200 4144
+Not Found: /favicon.ico
+[04/Aug/2024 15:48:51] "GET /favicon.ico HTTP/1.1" 404 2236
+August 04, 2024 - 15:48:42
+Django version 4.2.14, using settings 'tree_project.settings'
+Starting development server at http://0.0.0.0:8000/
+Quit the server with CONTROL-C.
+
+static/input_img/2024-08-04_15-49-23/tree_image/output_93.jpeg.aux.xml
+static/input_img/2024-08-04_15-49-23/tree_image/output_90.jgw
+The file has a .jgw extension.
+static/input_img/2024-08-04_15-49-23/tree_image/output_90.jpeg.aux.xml
+static/input_img/2024-08-04_15-49-23/tree_image/output_93.jgw
+The file has a .jgw extension.
+static/input_img/2024-08-04_15-49-23/tree_image/.DS_Store
+static/input_img/2024-08-04_15-49-23/tree_image/output_90.jpeg
+
+0: 640x640 3 trees, 1 single-tree, 1 fallen-tree, 2 paths, 2 unhealthy-trees, 951.5ms
+Speed: 15.4ms preprocess, 951.5ms inference, 17.0ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+1 label saved to runs/segment/predict/labels
+path
+(1275, 873) (1318, 943)
+(1318, 943) (1354, 956)
+(1354, 956) (1450, 1050)
+(1275, 873) (1322, 893)
+(423, 27) (1275, 873)
+path
+(383, 12) (428, 27)
+(428, 27) (652, 239)
+(652, 239) (1273, 867)
+(1273, 867) (1292, 912)
+(1321, 935) (1327, 936)
+(1319, 889) (1322, 893)
+static/input_img/2024-08-04_15-49-23/tree_image/output_93.jpeg
+
+0: 640x640 6 trees, 2 fallen-trees, 1 path, 843.2ms
+Speed: 11.0ms preprocess, 843.2ms inference, 16.1ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+2 labels saved to runs/segment/predict/labels
+[04/Aug/2024 15:49:28] "POST / HTTP/1.1" 200 404
+[04/Aug/2024 15:49:29] "GET /static/result/2024-08-04_15-49-23/output_90.jpeg HTTP/1.1" 200 409863
+[04/Aug/2024 15:49:29] "GET /static/input_img/2024-08-04_15-49-23/tree_image/output_93.jpeg HTTP/1.1" 200 763691
+[04/Aug/2024 15:49:38] "GET /static/output.geojson HTTP/1.1" 200 4899
+Not Found: /_stcore/health
+[04/Aug/2024 15:49:38] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 15:49:38] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 15:49:49] "GET / HTTP/1.1" 200 4144
+[04/Aug/2024 15:49:57] "GET / HTTP/1.1" 200 4144
+path
+(586, 11) (601, 32)
+static/input_img/2024-08-04_15-50-16/tree_image/output_93.jpeg.aux.xml
+static/input_img/2024-08-04_15-50-16/tree_image/output_90.jgw
+The file has a .jgw extension.
+static/input_img/2024-08-04_15-50-16/tree_image/output_90.jpeg.aux.xml
+static/input_img/2024-08-04_15-50-16/tree_image/output_93.jgw
+The file has a .jgw extension.
+static/input_img/2024-08-04_15-50-16/tree_image/.DS_Store
+static/input_img/2024-08-04_15-50-16/tree_image/output_90.jpeg
+
+0: 640x640 3 trees, 1 single-tree, 1 fallen-tree, 2 paths, 2 unhealthy-trees, 843.0ms
+Speed: 4.8ms preprocess, 843.0ms inference, 15.1ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+1 label saved to runs/segment/predict/labels
+path
+(1275, 873) (1318, 943)
+(1318, 943) (1354, 956)
+(1354, 956) (1450, 1050)
+(1275, 873) (1322, 893)
+(423, 27) (1275, 873)
+path
+(383, 12) (428, 27)
+(428, 27) (652, 239)
+(652, 239) (1273, 867)
+(1273, 867) (1292, 912)
+(1321, 935) (1327, 936)
+(1319, 889) (1322, 893)
+static/input_img/2024-08-04_15-50-16/tree_image/output_93.jpeg
+
+0: 640x640 6 trees, 2 fallen-trees, 1 path, 799.3ms
+Speed: 4.7ms preprocess, 799.3ms inference, 18.7ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+2 labels saved to runs/segment/predict/labels
+[04/Aug/2024 15:50:18] "POST / HTTP/1.1" 200 404
+[04/Aug/2024 15:50:18] "GET /static/input_img/2024-08-04_15-50-16/tree_image/output_90.jpeg HTTP/1.1" 200 680093
+[04/Aug/2024 15:50:19] "GET /static/result/2024-08-04_15-50-16/output_90.jpeg HTTP/1.1" 200 409863
+[04/Aug/2024 15:50:20] "GET /static/input_img/2024-08-04_15-50-16/tree_image/output_93.jpeg HTTP/1.1" 200 763691
+[04/Aug/2024 15:50:28] "GET /static/output.geojson HTTP/1.1" 200 9671
+Not Found: /_stcore/health
+[04/Aug/2024 15:50:39] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 15:50:39] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 15:50:50] "GET /static/result/2024-08-04_15-50-16/output_93.jpeg HTTP/1.1" 200 426607
+Not Found: /_stcore/health
+[04/Aug/2024 15:51:40] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 15:51:40] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 15:52:41] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 15:52:41] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 15:53:42] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 15:53:42] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 15:54:43] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 15:54:43] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 15:55:44] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 15:55:44] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 15:56:45] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 15:56:45] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 15:57:46] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 15:57:46] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+[04/Aug/2024 15:58:47] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 15:58:47] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 15:59:48] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 15:59:48] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 16:00:49] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 16:00:49] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:01:50] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:01:50] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:02:51] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:02:51] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:03:52] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:03:52] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 16:04:53] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:04:53] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 16:05:54] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:05:54] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 16:06:55] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:06:55] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:07:56] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:07:56] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:08:57] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:08:57] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:09:58] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:09:58] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 16:10:59] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:10:59] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 16:12:00] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:12:00] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:13:01] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:13:01] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:14:02] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:14:02] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:14:42] "GET / HTTP/1.1" 200 4144
+Not Found: /favicon.ico
+[04/Aug/2024 16:14:42] "GET /favicon.ico HTTP/1.1" 404 2236
+[04/Aug/2024 16:14:56] "GET /static/loader/loading.gif HTTP/1.1" 200 631988
+path
+(586, 11) (601, 32)
+static/input_img/2024-08-04_16-14-56/Test_4_ai/output_3.jpeg
+
+0: 640x640 2 trees, 1 path, 3 crops, 1124.5ms
+Speed: 29.4ms preprocess, 1124.5ms inference, 13.2ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+1 label saved to runs/segment/predict/labels
+[04/Aug/2024 16:14:57] "POST / HTTP/1.1" 200 281
+[04/Aug/2024 16:14:58] "GET /static/result/2024-08-04_16-14-56/output_3.jpeg HTTP/1.1" 200 318370
+[04/Aug/2024 16:14:58] "GET /static/input_img/2024-08-04_16-14-56/Test_4_ai/output_3.jpeg HTTP/1.1" 200 612133
+Not Found: /_stcore/health
+[04/Aug/2024 16:15:03] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:15:03] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:15:09] "GET /static/output.geojson HTTP/1.1" 200 11726
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:16:04] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:16:04] "GET /_stcore/health HTTP/1.1" 404 2245
+path
+(781, 946) (870, 946)
+(870, 946) (900, 934)
+(900, 934) (1036, 921)
+(1036, 921) (1170, 874)
+(270, 1025) (569, 995)
+(569, 995) (743, 964)
+(743, 964) (781, 946)
+(781, 946) (787, 926)
+(787, 926) (800, 924)
+(815, 923) (823, 922)
+static/input_img/2024-08-04_16-14-56/Test_4_ai/output_3.jgw
+The file has a .jgw extension.
+static/input_img/2024-08-04_16-16-47/test_2_ai/output_67.jgw
+The file has a .jgw extension.
+static/input_img/2024-08-04_16-16-47/test_2_ai/output_156.jgw
+The file has a .jgw extension.
+static/input_img/2024-08-04_16-16-47/test_2_ai/output_59.jpeg
+
+0: 640x640 2 trees, 905.9ms
+Speed: 14.2ms preprocess, 905.9ms inference, 7.7ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+1 label saved to runs/segment/predict/labels
+static/input_img/2024-08-04_16-16-47/test_2_ai/output_83.jpeg
+
+0: 640x640 3 trees, 1 single-tree, 20 fallen-trees, 959.8ms
+Speed: 6.2ms preprocess, 959.8ms inference, 38.6ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+2 labels saved to runs/segment/predict/labels
+static/input_img/2024-08-04_16-16-47/test_2_ai/output_59.jgw
+The file has a .jgw extension.
+static/input_img/2024-08-04_16-16-47/test_2_ai/output_92.jpeg
+
+0: 640x640 5 trees, 1 single-tree, 1 fallen-tree, 2 paths, 820.3ms
+Speed: 5.5ms preprocess, 820.3ms inference, 19.0ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+3 labels saved to runs/segment/predict/labels
+path
+(534, 1399) (579, 1489)
+path
+(283, 858) (323, 947)
+(323, 947) (370, 1007)
+(370, 1007) (406, 1097)
+(406, 1097) (410, 1141)
+(410, 1141) (469, 1263)
+static/input_img/2024-08-04_16-16-47/test_2_ai/output_144.jgw
+The file has a .jgw extension.
+static/input_img/2024-08-04_16-16-47/test_2_ai/output_63.jpeg
+
+0: 640x640 4 trees, 1 path, 2 crops, 739.9ms
+Speed: 7.9ms preprocess, 739.9ms inference, 11.1ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+4 labels saved to runs/segment/predict/labels
+path
+(972, 905) (1066, 1070)
+(1066, 1070) (1091, 1128)
+(1091, 1128) (1104, 1142)
+(1104, 1142) (1283, 1484)
+static/input_img/2024-08-04_16-16-47/test_2_ai/output_105.jgw
+The file has a .jgw extension.
+static/input_img/2024-08-04_16-16-47/test_2_ai/output_38.jpeg
+
+0: 640x640 1 crop, 729.1ms
+Speed: 3.9ms preprocess, 729.1ms inference, 3.8ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+5 labels saved to runs/segment/predict/labels
+static/input_img/2024-08-04_16-16-47/test_2_ai/output_128.jpeg
+
+0: 640x640 1 crop, 821.3ms
+Speed: 5.5ms preprocess, 821.3ms inference, 3.7ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+6 labels saved to runs/segment/predict/labels
+static/input_img/2024-08-04_16-16-47/test_2_ai/output_69.jgw
+The file has a .jgw extension.
+static/input_img/2024-08-04_16-16-47/test_2_ai/output_97.jpeg
+
+0: 640x640 (no detections), 809.4ms
+Speed: 3.7ms preprocess, 809.4ms inference, 0.7ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+6 labels saved to runs/segment/predict/labels
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/opt/API-Germany-SummerAI-main/tree_app/views.py", line 517, in index
+    using_box_find_center_point(boxes,postion_ls, output_directory, file_name,image)
+  File "/var/opt/API-Germany-SummerAI-main/tree_app/views.py", line 108, in using_box_find_center_point
+    with open(input_filepath, "r") as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/var/opt/API-Germany-SummerAI-main/runs/segment/predict/labels/output_97.txt'
+[04/Aug/2024 16:16:56] "POST / HTTP/1.1" 500 84215
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:17:05] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:17:05] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 16:18:06] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:18:06] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:19:07] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:19:07] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 16:19:39] "GET /static/output.geojson HTTP/1.1" 200 11726
+Not Found: /_stcore/health
+[04/Aug/2024 16:20:08] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:20:08] "GET /_stcore/host-config HTTP/1.1" 404 2260
+'NoneType' object has no attribute 'xy'
+static/input_img/2024-08-04_16-20-18/Test_AI/output_19.jpeg
+
+0: 640x640 (no detections), 1078.9ms
+Speed: 9.2ms preprocess, 1078.9ms inference, 1.2ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+0 label saved to runs/segment/predict/labels
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/opt/API-Germany-SummerAI-main/tree_app/views.py", line 517, in index
+    using_box_find_center_point(boxes,postion_ls, output_directory, file_name,image)
+  File "/var/opt/API-Germany-SummerAI-main/tree_app/views.py", line 108, in using_box_find_center_point
+    with open(input_filepath, "r") as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/var/opt/API-Germany-SummerAI-main/runs/segment/predict/labels/output_19.txt'
+[04/Aug/2024 16:20:19] "POST / HTTP/1.1" 500 77662
+[04/Aug/2024 16:20:26] "GET / HTTP/1.1" 200 4144
+'NoneType' object has no attribute 'xy'
+static/input_img/2024-08-04_16-20-43/Test_AI/output_19.jpeg
+
+0: 640x640 (no detections), 926.5ms
+Speed: 17.4ms preprocess, 926.5ms inference, 0.8ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+0 label saved to runs/segment/predict/labels
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/opt/API-Germany-SummerAI-main/tree_app/views.py", line 517, in index
+    using_box_find_center_point(boxes,postion_ls, output_directory, file_name,image)
+  File "/var/opt/API-Germany-SummerAI-main/tree_app/views.py", line 108, in using_box_find_center_point
+    with open(input_filepath, "r") as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/var/opt/API-Germany-SummerAI-main/runs/segment/predict/labels/output_19.txt'
+[04/Aug/2024 16:20:44] "POST / HTTP/1.1" 500 77415
+Not Found: /_stcore/health
+[04/Aug/2024 16:21:09] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:21:09] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:22:04] "GET / HTTP/1.1" 200 4144
+Not Found: /_stcore/health
+[04/Aug/2024 16:22:10] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:22:10] "GET /_stcore/host-config HTTP/1.1" 404 2260
+'NoneType' object has no attribute 'xy'
+static/input_img/2024-08-04_16-22-22/Test_AI/output_19.jpeg
+
+0: 640x640 (no detections), 857.3ms
+Speed: 9.4ms preprocess, 857.3ms inference, 1.0ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+0 label saved to runs/segment/predict/labels
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/opt/API-Germany-SummerAI-main/tree_app/views.py", line 517, in index
+    using_box_find_center_point(boxes,postion_ls, output_directory, file_name,image)
+  File "/var/opt/API-Germany-SummerAI-main/tree_app/views.py", line 108, in using_box_find_center_point
+    with open(input_filepath, "r") as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/var/opt/API-Germany-SummerAI-main/runs/segment/predict/labels/output_19.txt'
+[04/Aug/2024 16:22:23] "POST / HTTP/1.1" 500 77415
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:23:11] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 16:23:11] "GET /_stcore/host-config HTTP/1.1" 404 2260
+'NoneType' object has no attribute 'xy'
+static/input_img/2024-08-04_16-23-45/Test_3_ai/output_15.jgw
+The file has a .jgw extension.
+static/input_img/2024-08-04_16-23-45/Test_3_ai/output_15.jpeg
+
+0: 640x640 3 trees, 3 single-trees, 1 fallen-tree, 2 unhealthy-trees, 754.2ms
+Speed: 4.6ms preprocess, 754.2ms inference, 18.8ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+1 label saved to runs/segment/predict/labels
+[04/Aug/2024 16:23:46] "POST / HTTP/1.1" 200 283
+[04/Aug/2024 16:23:46] "GET /static/input_img/2024-08-04_16-23-45/Test_3_ai/output_15.jpeg HTTP/1.1" 200 783489
+[04/Aug/2024 16:23:46] "GET /static/result/2024-08-04_16-23-45/output_15.jpeg HTTP/1.1" 200 473044
+Not Found: /_stcore/health
+[04/Aug/2024 16:24:12] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:24:12] "GET /_stcore/host-config HTTP/1.1" 404 2260
+static/input_img/2024-08-04_16-24-32/Test_AI/output_19.jpeg
+
+0: 640x640 (no detections), 756.7ms
+Speed: 5.6ms preprocess, 756.7ms inference, 1.2ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+0 label saved to runs/segment/predict/labels
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/opt/API-Germany-SummerAI-main/tree_app/views.py", line 517, in index
+    using_box_find_center_point(boxes,postion_ls, output_directory, file_name,image)
+  File "/var/opt/API-Germany-SummerAI-main/tree_app/views.py", line 108, in using_box_find_center_point
+    with open(input_filepath, "r") as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/var/opt/API-Germany-SummerAI-main/runs/segment/predict/labels/output_19.txt'
+[04/Aug/2024 16:24:33] "POST / HTTP/1.1" 500 77662
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:25:13] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:25:13] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 16:26:14] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:26:14] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:27:15] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:27:15] "GET /_stcore/host-config HTTP/1.1" 404 2260
+'NoneType' object has no attribute 'xy'
+static/input_img/2024-08-04_16-27-20/Test_AI/output_19.jpeg
+
+0: 640x640 (no detections), 971.4ms
+Speed: 16.2ms preprocess, 971.4ms inference, 1.2ms postprocess per image at shape (1, 3, 640, 640)
+Results saved to [1mruns/segment/predict[0m
+0 label saved to runs/segment/predict/labels
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/var/opt/v_venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/var/opt/API-Germany-SummerAI-main/tree_app/views.py", line 517, in index
+    using_box_find_center_point(boxes,postion_ls, output_directory, file_name,image)
+  File "/var/opt/API-Germany-SummerAI-main/tree_app/views.py", line 108, in using_box_find_center_point
+    with open(input_filepath, "r") as input_file:
+FileNotFoundError: [Errno 2] No such file or directory: '/var/opt/API-Germany-SummerAI-main/runs/segment/predict/labels/output_19.txt'
+[04/Aug/2024 16:27:22] "POST / HTTP/1.1" 500 77662
+Not Found: /_stcore/health
+[04/Aug/2024 16:28:16] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:28:16] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 16:29:17] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:29:17] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:30:18] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:30:18] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 16:31:19] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:31:19] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:32:20] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 16:32:20] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:33:21] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:33:21] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:34:22] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:34:22] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:35:23] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:35:23] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:36:24] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:36:24] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:37:25] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 16:37:25] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:38:26] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 16:38:26] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:39:27] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:39:27] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 16:40:28] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:40:28] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 16:41:29] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:41:29] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 16:42:30] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:42:30] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:43:31] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:43:31] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:44:32] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 16:44:32] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:45:33] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 16:45:33] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:46:34] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:46:34] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:47:35] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:47:35] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 16:48:36] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:48:36] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:49:37] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:49:37] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 16:50:38] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:50:38] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:51:39] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:51:39] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 16:52:40] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:52:40] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:53:41] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:53:41] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 16:54:42] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 16:54:42] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 16:55:43] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:55:43] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:56:44] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 16:56:44] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:57:45] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 16:57:45] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 16:58:46] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:58:46] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 16:59:47] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 16:59:47] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:00:48] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:00:48] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 17:01:49] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 17:01:49] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 17:02:50] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:02:50] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:03:51] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:03:51] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:04:52] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:04:52] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:05:53] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:05:53] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:06:54] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:06:54] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:07:55] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:07:55] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:08:56] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:08:56] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:09:57] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 17:09:57] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:10:58] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:10:58] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 17:11:59] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:11:59] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:13:00] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:13:00] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:14:01] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 17:14:01] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 17:15:02] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:15:02] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:16:03] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:16:03] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:17:04] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:17:04] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:18:05] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:18:05] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 17:19:06] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 17:19:06] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:20:07] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 17:20:07] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 17:21:08] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 17:21:08] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 17:22:09] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:22:09] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:23:10] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:23:10] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:24:11] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:24:11] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:25:12] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:25:12] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:26:13] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:26:13] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:27:14] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:27:14] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:28:15] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:28:15] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:29:16] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 17:29:16] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:30:17] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 17:30:17] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:31:18] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 17:31:18] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 17:32:19] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:32:19] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 17:33:20] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 17:33:20] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:34:21] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:34:21] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 17:35:22] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:35:22] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:36:23] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:36:23] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:37:24] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:37:24] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 17:37:33] code 400, message Bad request version ('À\x14À')
+[04/Aug/2024 17:37:33] You're accessing the development server over HTTPS, but it only supports HTTP.
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:38:25] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 17:38:25] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:39:26] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:39:26] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 17:40:27] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 17:40:27] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 17:41:28] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:41:28] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:42:29] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 17:42:29] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:43:30] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:43:30] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:44:31] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:44:31] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:45:32] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:45:32] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:46:33] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:46:33] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 17:47:34] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 17:47:34] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:48:35] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 17:48:35] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:49:36] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:49:36] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 17:50:37] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:50:37] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:51:38] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 17:51:38] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:52:39] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:52:39] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/host-config
+Not Found: /_stcore/health
+[04/Aug/2024 17:53:40] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 17:53:40] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/health
+[04/Aug/2024 17:54:41] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:54:41] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:55:42] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:55:42] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:56:43] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:56:43] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:57:44] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:57:44] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 17:58:45] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:58:45] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 17:59:37] "GET / HTTP/1.1" 200 4144
+Not Found: /favicon.ico
+[04/Aug/2024 17:59:38] "GET /favicon.ico HTTP/1.1" 404 2236
+Not Found: /_stcore/health
+[04/Aug/2024 17:59:46] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 17:59:46] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 18:00:47] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 18:00:47] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 18:01:48] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 18:01:48] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 18:02:49] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 18:02:49] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 18:03:50] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 18:03:50] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 18:04:51] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 18:04:51] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 18:05:52] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 18:05:52] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 18:06:53] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 18:06:53] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 18:07:54] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 18:07:54] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 18:08:55] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 18:08:55] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /_stcore/health
+[04/Aug/2024 18:09:56] "GET /_stcore/health HTTP/1.1" 404 2245
+Not Found: /_stcore/host-config
+[04/Aug/2024 18:09:56] "GET /_stcore/host-config HTTP/1.1" 404 2260
+Not Found: /example.com:443
+[04/Aug/2024 18:43:51] "CONNECT example.com:443 HTTP/1.1" 404 1795
+Not Found: /_stcore/health
+Not Found: /_stcore/host-config
+[04/Aug/2024 18:54:51] "GET /_stcore/host-config HTTP/1.1" 404 2260
+[04/Aug/2024 18:54:51] "GET /_stcore/health HTTP/1.1" 404 2245
+[04/Aug/2024 19:02:32] code 400, message Bad request syntax ('MGLNDD_185.215.164.205_8000')
+[04/Aug/2024 19:02:32] "MGLNDD_185.215.164.205_8000" 400 -
