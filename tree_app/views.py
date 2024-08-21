@@ -12,6 +12,7 @@ import rasterio
 from pathlib import Path
 import os
 import zipfile
+from ultralytics import YOLO
 
 # Define the base directory of the project
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -219,7 +220,7 @@ def genrate_json_json(input_directory, output_geojson_file):
                     "type": "Feature",
                     "geometry": {
                         "type": geometry_type,
-                        geometry_key: coordinates
+                        'coordinates': coordinates
                     },
                     "properties": {
                         "id": id,
@@ -400,6 +401,13 @@ def index(request):
                     }
                     return JsonResponse(context)
 
+            if model_selection == "summer":
+                print("Using Summer Model/////////////////////.")
+                model = YOLO('static/models/germany_summer_ai_model/new_one_last.pt')
+            elif model_selection == "winter":
+                print("Using Winter Model/////////////////////")
+                model = YOLO('static/models/germany_winter_ai_model/best.pt')
+
             for file in os.listdir(folder_path):
                 path = os.path.join(folder_path, file)
                 file_name = file
@@ -413,7 +421,7 @@ def index(request):
                 elif extension in image_extensions:
                     image = Image.open(path)
                     # Run the prediction model on the image
-                    flag, ori_path, boxes, img_count, box_ls, postion_ls, center_ls = prediction(image, model_selection)
+                    flag, ori_path, boxes, img_count, box_ls, postion_ls, center_ls = prediction(image, model)
                     output_directory = 'static/centers'
                     using_box_find_center_point(boxes, postion_ls, output_directory, file_name, image)
                     output_path = f'{output_folder}/{file_name}'
