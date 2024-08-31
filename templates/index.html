@@ -104,7 +104,7 @@
         },
         complete: function(result) {
           $("body").removeClass("loading");
-          $('#myForm')[0].reset();
+<!--          $('#myForm')[0].reset();-->
           console.log(result['responseJSON']);
 
           var flag = result['responseJSON']['status'];

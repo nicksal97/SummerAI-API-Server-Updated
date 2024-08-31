@@ -6,7 +6,10 @@ import numpy as np
 from shapely.geometry import Polygon, MultiLineString
 import pygeoops
 from shapely.ops import linemerge
-
+from helpers import *
+# from ultralytics import YOLO
+# model = YOLO('static/models/germany_summer_ai_model/new_one_last.pt')
+import json
 
 def polygon_area(vertices):
     """Calculate the area of a polygon given its vertices."""
@@ -63,10 +66,14 @@ def prediction(image, model):
         box_ls = []
 
         for r in results:
+            all_points = []
+            polygon_path_list = []
             boxes = r.boxes  # Bounding boxes for detected objects
             im_array = r.plot(line_width=4, conf=1)  # Generate an image with annotated results
             im = Image.fromarray(im_array[..., ::-1])  # Convert image to PIL format
             image_np = np.array(im)  # Convert image to NumPy array
+            h, w, c = image_np.shape
+            threshold = h / 30
             class_ids = r.boxes.cls.tolist()  # Get the list of class IDs for detected objects
 
             # Initialize a dictionary to count occurrences of each class
@@ -135,21 +142,53 @@ def prediction(image, model):
                             points = [(int(point[0]), int(point[1])) for point in line.coords]
 
                             for i in range(len(points) - 1):
-                                cv2.line(image_np, points[i], points[i + 1], color=(0, 0, 255), thickness=2)
-                                print(points[i], points[i + 1])
-                                line_list.append((points[i], points[i + 1]))
 
-                        postion_ls.append({class_name: f"{round(poly_area_meter, 2)} m²", "line_value": line_list})
+                                cv2.line(image_np, points[i], points[i + 1], color=(0, 0, 255), thickness=2)
+                                # print(points[i], points[i + 1])
+                                line_list.append((points[i], points[i + 1]))
+                                all_points.append((points[i], points[i + 1])) # All Points of path append here
+                        print('line_list:',line_list)
+                        area_value = f"{round(poly_area_meter, 2)} m²"
+                        polygon_path_list.append(area_value)
+                        # postion_ls.append({class_name: f"{round(poly_area_meter, 2)} m²", "line_value": line_list})
                     else:
                         postion_ls.append({class_name: f"{round(poly_area_meter, 2)} m²", "line_value": False})
 
                 # Convert the modified image back to PIL format and return the results
             except:
                 pass
+            groups = find_groups(all_points, threshold) # create groups of all path value
+            for group in groups:
+                # Collect points from the group
+                group_points = collect_points(group)
+
+                # Sort the points to create a forward-moving polyline
+                sorted_points = sort_points(group_points)
+                # Filter out zigzagging points
+                filtered_points = filter_zigzag(sorted_points, tolerance=50)
+                # Smooth the path to prevent zigzagging
+                smooth_points = smooth_path(filtered_points, smoothing_factor=0)
+                cv2.polylines(image_np, [np.array(smooth_points, dtype=np.int32)], isClosed=False, color=(0, 200, 0),
+                              thickness=2)
+                smooth_points1 = np.array(smooth_points).tolist() # convert np array list to list
+                line_list1 = []
+                for i in range(len(smooth_points1) - 1):
+                    start_point = tuple(smooth_points1[i])
+                    end_point = tuple(smooth_points1[i + 1])
+                    line_list1.append((start_point, end_point)) # append tuple on this list
+                    # cv2.line(image_np, start_point, end_point, color=(0, 255, 0), thickness=2)
+
+                postion_ls.append({'path': f"88.7 m²", "line_value":line_list1})
+
             modified_im = Image.fromarray(image_np)
+
             return True, modified_im, boxes, text_list, box_ls, postion_ls, center_ls
 
     except Exception as e:
         # Handle any exceptions that occur during processing
         print(str(e))
         return False, '', '', '', '', '', ''
+
+# image = 'static/input_img/2024-08-21_18-56-12/test/output_6.jpeg'
+#
+# prediction(image, model)
