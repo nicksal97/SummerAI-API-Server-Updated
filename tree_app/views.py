@@ -3,6 +3,7 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 from django.core.files.storage import FileSystemStorage
 from inference import prediction
+# from ali_work import prediction
 import glob
 from PIL import Image
 import json
@@ -22,6 +23,11 @@ print(BASE_DIR)  # Print the base directory path for debugging
 def calculate_center_points(line, output_image_path):
     """Calculate the center points from the bounding box coordinates."""
     parts = line.split()
+    class_value_id = parts[0]
+    print(class_value_id)
+    if class_value_id == '6':
+        return False,False
+
     bounding_coordinates = [float(x) for x in parts[1:]]  # Extract and convert coordinates to float
 
     x_coordinates = bounding_coordinates[::2]  # Extract X coordinates (even-indexed)
@@ -46,6 +52,7 @@ def create_center_point(input_directory, output_directory, output_image_path):
             center_points = []
             for line in lines:
                 center_point = calculate_center_points(line, output_image_path)
+                print(center_point)
                 if center_point:
                     center_points.append(center_point)
 
@@ -87,7 +94,9 @@ def using_box_find_center_point(boxes, postion_ls, output_directory, input_filen
         center_points = []
         for line in lines:
             center_point = calculate_center_points(line, output_image_path)
-            if center_point:
+            print(center_point)
+            if False not in center_point:
+                print("work")
                 center_points.append(center_point)
 
         # Convert input filename to JSON and write the data to the output file
@@ -184,7 +193,7 @@ def calculate_center_points_geojson(line, polygone_area, output_filename):
     return output_filename, coordinates, detection_point_name, polygone_area_value
 
 
-def genrate_json_json(input_directory, output_geojson_file):
+def genrate_json_json(input_directory, output_geojson_file,model_selection):
     """Generate a GeoJSON file from the processed JSON data."""
     feature_collection = {
         "type": "FeatureCollection",
@@ -206,30 +215,110 @@ def genrate_json_json(input_directory, output_geojson_file):
             with open(input_filepath, 'r') as file:
                 data = json.load(file)
             id = 0
+            print(len(data['actual_coordinates']))
+            print(len(data['polygone_area']))
+            if model_selection == "winter":
+                for polygon_area in data['polygone_area']:
+                    detection_point_name = list(polygon_area.keys())[0]
+                    polygone_area_value = polygon_area[detection_point_name]
+                    if 'path' in detection_point_name:
+                        coordinates = polygon_area['line_value']
+                        id += 1
+                        feature = {
+                            "type": "Feature",
+                            "geometry": {
+                                "type": "LineString",
+                                'coordinates': coordinates
+                            },
+                            "properties": {
+                                "id": id,
+                                "name": f"{detection_point_name}",
+                                "description": f"{output_filename}.png",
+                                "polygon_area": f"{polygone_area_value}",
+                            },
+                        }
+                        feature_collection["features"].append(feature)
+            else:
 
-            for line, polygone_area in zip(data['actual_coordinates'], data['polygone_area']):
-                output_filename, coordinates, detection_point_name, polygone_area_value = calculate_center_points_geojson(
-                    line, polygone_area, output_filename)
-                id += 1
+                for index, line in enumerate(data['actual_coordinates']):
+                    try:
+                        polygon_area = data['polygone_area'][index]
+                        detection_point_name = list(polygon_area.keys())[0]
+                        polygone_area_value = polygon_area[detection_point_name]
+                    except:
+                        detection_point_name = 'unhealthy-tree'
+                        polygone_area_value = '216.85 m²',
+                    if 'path' in detection_point_name:
+                        detection_point_name = 'unhealthy-tree'
+                    x_coordinates = [float(line[i]) for i in range(0, len(line), 2)]
+                    y_coordinates = [float(line[i]) for i in range(1, len(line), 2)]
+                    coordinates = [x_coordinates[0], y_coordinates[0]]
+                    id += 1
+                    feature = {
+                        "type": "Feature",
+                        "geometry": {
+                            "type": 'Point',
+                            'coordinates': coordinates
+                        },
+                        "properties": {
+                            "id": id,
+                            "name": f"{detection_point_name}",
+                            "description": f"{output_filename}.png",
+                            "polygon_area": f"{polygone_area_value}",
+                        },
+                    }
+                    feature_collection["features"].append(feature)
 
-                # Define geometry type (LineString or Point) based on detection point type
-                geometry_type = "LineString" if 'path' in detection_point_name else "Point"
-                geometry_key = 'line_value' if 'path' in detection_point_name else 'coordinates'
+                for polygon_area in data['polygone_area']:
+                        detection_point_name = list(polygon_area.keys())[0]
+                        polygone_area_value = polygon_area[detection_point_name]
+                        if 'path' in detection_point_name:
+                            coordinates = polygon_area['line_value']
+                            id += 1
+                            feature = {
+                                "type": "Feature",
+                                "geometry": {
+                                    "type": "LineString",
+                                    'coordinates': coordinates
+                                },
+                                "properties": {
+                                    "id": id,
+                                    "name": f"{detection_point_name}",
+                                    "description": f"{output_filename}.png",
+                                    "polygon_area": f"{polygone_area_value}",
+                                },
+                            }
+                            feature_collection["features"].append(feature)
 
-                feature = {
-                    "type": "Feature",
-                    "geometry": {
-                        "type": geometry_type,
-                        'coordinates': coordinates
-                    },
-                    "properties": {
-                        "id": id,
-                        "name": f"{detection_point_name}",
-                        "description": f"{output_filename}.png",
-                        "polygon_area": f"{polygone_area_value}",
-                    },
-                }
-                feature_collection["features"].append(feature)
+
+
+
+
+            # for line, polygone_area in zip(data['actual_coordinates'], data['polygone_area']):
+            #     output_filename, coordinates, detection_point_name, polygone_area_value = calculate_center_points_geojson(
+            #         line, polygone_area, output_filename)
+            #     id += 1
+            #     print("detection_point_name:",detection_point_name)
+            #
+            #     # Define geometry type (LineString or Point) based on detection point type
+            #     geometry_type = "LineString" if 'path' in detection_point_name else "Point"
+            #     geometry_key = 'line_value' if 'path' in detection_point_name else 'coordinates'
+            #     # print("geometry_type:",geometry_type)
+            #
+            #     feature = {
+            #         "type": "Feature",
+            #         "geometry": {
+            #             "type": geometry_type,
+            #             'coordinates': coordinates
+            #         },
+            #         "properties": {
+            #             "id": id,
+            #             "name": f"{detection_point_name}",
+            #             "description": f"{output_filename}.png",
+            #             "polygon_area": f"{polygone_area_value}",
+            #         },
+            #     }
+            #     feature_collection["features"].append(feature)
 
     # Write the feature collection to a GeoJSON file
     with open(output_geojson_file, "w") as output_file:
@@ -419,6 +508,7 @@ def index(request):
                 elif path == 'pra/test/.DS_Store':
                     pass
                 elif extension in image_extensions:
+                    print("file_name:",file_name)
                     image = Image.open(path)
                     # Run the prediction model on the image
                     flag, ori_path, boxes, img_count, box_ls, postion_ls, center_ls = prediction(image, model)
@@ -448,7 +538,7 @@ def index(request):
 
             location_point(centers_directory, data_directory, output_directory)
             output_geojson_file = "static/output.geojson"
-            genrate_json_json(output_directory, output_geojson_file)
+            genrate_json_json(output_directory, output_geojson_file,model_selection)
 
             final_dict_list = {
                 "final_result": final_list
