@@ -20,16 +20,14 @@
       top: 0;
       left: 0;
       z-index: 999;
-      background: rgba(255,255,255,0.8) url("/static/loader/loading.gif") center no-repeat;
+      background: rgba(255,255,255,0.8) url("{% static 'loader/loading.gif' %}") center no-repeat;
     }
     body {
       text-align: center;
     }
-    /* Turn off scrollbar when body element has the loading class */
     body.loading {
       overflow: hidden;
     }
-    /* Make spinner image visible when body element has the loading class */
     body.loading .overlay {
       display: block;
     }
@@ -41,15 +39,35 @@
 </head>
 <body>
 <div class="overlay"></div>
+
+<!-- Top navigation bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand btn btn-primary text-white mr-2" href="{% url 'index' %}">Home</a>
+  <a class="navbar-brand btn btn-success text-white mr-2" href="{% url 'model-upload' %}">Upload Model</a>
+  <div class="ml-auto">
+    <a href="{% url 'logout' %}" class="btn btn-outline-danger">Logout</a>
+  </div>
+</nav>
+
 <div class="container">
   <form id="myForm">
     <h1 class="text-center">TREE PROJECT</h1><br><br>
     <div class="form-group">
-      <label for="model">Select Model:</label>
+      <label for="model">Select Model Type:</label>
       <select class="form-control" id="model" name="model">
         <option value="winter">Winter</option>
         <option value="summer">Summer</option>
       </select>
+    </div>
+    <div class="form-group">
+      <label for="model_name">Select Model Name:</label>
+      <select class="form-control" id="model_name" name="model_name">
+        <!-- Options will be dynamically populated here -->
+      </select>
+    </div>
+     <div class="form-group">
+      <label for="file">Select Tif File:</label>
+      <input type="file" class="form-control" id="tif_file" name="tif_file" accept=".tif">
     </div>
     <div class="form-group">
       <label for="file">Select Zip Folder:</label>
@@ -63,33 +81,102 @@
       <div class="col">
         <h3>Original Images</h3>
         <div id="original-images" class="ScrollStyle"></div>
+        <a id="download-zip" href="" download="output.zip" class="btn btn-primary">Zip-File-Download</a>
       </div>
       <div class="col">
         <h3>Processed Images</h3>
         <div id="processed-images" class="ScrollStyle"></div>
-       <a id="download-geojson" href="" download="output.geojson" class="btn btn-primary">GeoJSON-Download</a>
+        <a id="download-geojson" href="" download="output.geojson" class="btn btn-primary">GeoJSON-Download</a>
       </div>
     </div>
-    <div id="model-name" class="text-center mt-3"></div>  <!-- Element to display the selected model name -->
+    <div id="model-name" class="text-center mt-3"></div>
   </div>
   <br>
 </div>
 
 <script>
   $(document).ready(function() {
+    // Initially, both fields are visible
+    $('#tif_file').show();
+    $('#file').show();
+
+    // Event listener for .tif file input
+    $('#tif_file').change(function() {
+      if ($(this).val()) {
+        $('#file').hide(); // Hide the .zip input
+      } else {
+        $('#file').show(); // Show the .zip input if no .tif is selected
+      }
+    });
+
+    // Event listener for .zip file input
+    $('#file').change(function() {
+      if ($(this).val()) {
+        $('#tif_file').hide(); // Hide the .tif input
+      } else {
+        $('#tif_file').show(); // Show the .tif input if no .zip is selected
+      }
+    });
+  });
+</script>
+
+<script>
+  $(document).ready(function() {
     $("#main_container").hide();
+
+    // Function to update the model_name dropdown
+    function updateModelNameDropdown(modelPaths) {
+      var $modelNameDropdown = $('#model_name');
+      $modelNameDropdown.empty(); // Clear any existing options
+
+      // Populate the dropdown with model paths
+      modelPaths.forEach(function(path) {
+        if (path !== ".DS_Store") { // Ignore any unwanted files
+          $modelNameDropdown.append(new Option(path, path));
+        }
+      });
+    }
+
+    // Initial API call to populate model names based on the default selected model type
+    function fetchModelNames(selectedModel) {
+      fetch(`/model-upload1/?model=${selectedModel}`, {
+        method: 'GET',
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log("API Response:", data);
+        // Update model_name dropdown with data.model_path
+        updateModelNameDropdown(data.model_path);
+      })
+      .catch(error => {
+        console.error("Error calling the API:", error);
+      });
+    }
+
+    // Fetch model names when the page loads with default model
+    fetchModelNames($("#model").val());
+
+    // Handle model type change event
+    $("#model").change(function() {
+      var selectedModel = $(this).val();
+      fetchModelNames(selectedModel);
+    });
   });
 
   function myFunction() {
     var image_path = $("#file").prop('files')[0];
+    var tif_file = $("#tif_file").prop('files')[0];
     var selected_model = $("#model").val();
-
-    if (image_path == undefined) {
-      alert("Please select the file");
-    } else {
+    var model_name = $("#model_name").val();
+     if (!image_path && !tif_file) {
+    alert("Please select either a .zip file or a .tif file.");
+    return; // Stop execution
+  } else {
       var form_data = new FormData();
       form_data.append("file", image_path);
+      form_data.append("tif_file", tif_file);
       form_data.append("model", selected_model);
+      form_data.append("model_name", model_name);
       $.ajax({
         url: "/",
         type: "POST",
@@ -100,42 +187,37 @@
           $("body").addClass("loading");
         },
         success: function() {
-          console.log("abc");
+          console.log("File submitted successfully");
         },
         complete: function(result) {
           $("body").removeClass("loading");
-<!--          $('#myForm')[0].reset();-->
-          console.log(result['responseJSON']);
+          var responseData = result['responseJSON'];
 
-          var flag = result['responseJSON']['status'];
-          console.log("Status",flag)
-          if (flag == true) {
-            var geojson_path = result['responseJSON']['geojson_path'];
-            var input_image_list = result['responseJSON']['input_image_list'];
-            var output_image_list = result['responseJSON']['output_image_list'];
-            
-            var $originalImages = $('#original-images');
-            var $processedImages = $('#processed-images');
+          if (responseData && responseData.status) {
+            var geojson_path = responseData.geojson_path;
+            var input_image_list = responseData.input_image_list;
+            var output_image_list = responseData.output_image_list;
+            var zip_path = responseData.zip_path;
 
-            $originalImages.empty();
-            $processedImages.empty();
+            $('#original-images').empty();
+            $('#processed-images').empty();
 
             input_image_list.forEach(function(image_path) {
               var img = $('<img>').attr('src', image_path).addClass('img-fluid mb-2');
-              $originalImages.append(img);
+              $('#original-images').append(img);
             });
 
             output_image_list.forEach(function(image_path) {
               var img = $('<img>').attr('src', image_path).addClass('img-fluid mb-2');
-              $processedImages.append(img);
+              $('#processed-images').append(img);
             });
             $("#download-geojson").attr("href", geojson_path);
-            $("#model-name").text("Model Used: " + selected_model);  // Display the model name directly from the selected value
-
+            $("#download-zip").attr("href", zip_path);
+            $("#model-name").text("Model Used: " + selected_model);
 
             $("#main_container").show();
           } else {
-            alert("Please send a valid zip folder");
+            alert("Please upload a valid .zip file or a .tif file.");
           }
         }
       });

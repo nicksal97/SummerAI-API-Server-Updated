@@ -1,0 +1,100 @@
+
+File Name: Segmented_0_0.tif
+    Tile xmin coordinates at top left: 508418.08008452365
+    Tile ymin coordinates at top left: 5358836.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_0_1.tif
+    Tile xmin coordinates at top left: 508418.08008452365
+    Tile ymin coordinates at top left: 5358686.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_0_2.tif
+    Tile xmin coordinates at top left: 508418.08008452365
+    Tile ymin coordinates at top left: 5358536.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_0_3.tif
+    Tile xmin coordinates at top left: 508418.08008452365
+    Tile ymin coordinates at top left: 5358386.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_1_0.tif
+    Tile xmin coordinates at top left: 508568.08008452365
+    Tile ymin coordinates at top left: 5358836.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_1_1.tif
+    Tile xmin coordinates at top left: 508568.08008452365
+    Tile ymin coordinates at top left: 5358686.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_1_2.tif
+    Tile xmin coordinates at top left: 508568.08008452365
+    Tile ymin coordinates at top left: 5358536.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_1_3.tif
+    Tile xmin coordinates at top left: 508568.08008452365
+    Tile ymin coordinates at top left: 5358386.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_2_0.tif
+    Tile xmin coordinates at top left: 508718.08008452365
+    Tile ymin coordinates at top left: 5358836.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_2_1.tif
+    Tile xmin coordinates at top left: 508718.08008452365
+    Tile ymin coordinates at top left: 5358686.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_2_2.tif
+    Tile xmin coordinates at top left: 508718.08008452365
+    Tile ymin coordinates at top left: 5358536.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_2_3.tif
+    Tile xmin coordinates at top left: 508718.08008452365
+    Tile ymin coordinates at top left: 5358386.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_3_0.tif
+    Tile xmin coordinates at top left: 508868.08008452365
+    Tile ymin coordinates at top left: 5358836.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_3_1.tif
+    Tile xmin coordinates at top left: 508868.08008452365
+    Tile ymin coordinates at top left: 5358686.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_3_2.tif
+    Tile xmin coordinates at top left: 508868.08008452365
+    Tile ymin coordinates at top left: 5358536.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_3_3.tif
+    Tile xmin coordinates at top left: 508868.08008452365
+    Tile ymin coordinates at top left: 5358386.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_4_0.tif
+    Tile xmin coordinates at top left: 509018.08008452365
+    Tile ymin coordinates at top left: 5358836.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_4_1.tif
+    Tile xmin coordinates at top left: 509018.08008452365
+    Tile ymin coordinates at top left: 5358686.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_4_2.tif
+    Tile xmin coordinates at top left: 509018.08008452365
+    Tile ymin coordinates at top left: 5358536.992198435
+    Size of the cut: 150.0 x 150.0 m
+
+File Name: Segmented_4_3.tif
+    Tile xmin coordinates at top left: 509018.08008452365
+    Tile ymin coordinates at top left: 5358386.992198435
+    Size of the cut: 150.0 x 150.0 m

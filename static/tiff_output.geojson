@@ -1,0 +1,20 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1.0, "name": "single-tree", "description": "Segmented_0_0.png", "polygon_area": "20.41 m²" }, "geometry": { "type": "Point", "coordinates": [ 77.32813, -98.3125 ] } },
+{ "type": "Feature", "properties": { "id": 2.0, "name": "single-tree", "description": "Segmented_0_0.png", "polygon_area": "51.61 m²" }, "geometry": { "type": "Point", "coordinates": [ 64.555269230769227, -97.271653846153853 ] } },
+{ "type": "Feature", "properties": { "id": 3.0, "name": "unhealthy-tree", "description": "Segmented_0_0.png", "polygon_area": "286.5 m²" }, "geometry": { "type": "Point", "coordinates": [ 41.843750666666665, -93.706250666666676 ] } },
+{ "type": "Feature", "properties": { "id": 4.0, "name": "unhealthy-tree", "description": "Segmented_0_0.png", "polygon_area": "365.54 m²" }, "geometry": { "type": "Point", "coordinates": [ 41.288711504424761, -91.355087610619449 ] } },
+{ "type": "Feature", "properties": { "id": 5.0, "name": "single-tree", "description": "Segmented_0_0.png", "polygon_area": "9.06 m²" }, "geometry": { "type": "Point", "coordinates": [ 68.35935, -68.04685 ] } },
+{ "type": "Feature", "properties": { "id": 1.0, "name": "unhealthy-tree", "description": "Segmented_0_1.png", "polygon_area": "66.22 m²" }, "geometry": { "type": "Point", "coordinates": [ 59.595165909090916, -74.353686363636385 ] } },
+{ "type": "Feature", "properties": { "id": 2.0, "name": "unhealthy-tree", "description": "Segmented_0_1.png", "polygon_area": "80.39 m²" }, "geometry": { "type": "Point", "coordinates": [ 91.4538, -19.639945652173914 ] } },
+{ "type": "Feature", "properties": { "id": 3.0, "name": "unhealthy-tree", "description": "Segmented_0_1.png", "polygon_area": "140.62 m²" }, "geometry": { "type": "Point", "coordinates": [ 40.661273214285735, -16.8778 ] } },
+{ "type": "Feature", "properties": { "id": 4.0, "name": "single-tree", "description": "Segmented_0_1.png", "polygon_area": "41.97 m²" }, "geometry": { "type": "Point", "coordinates": [ 95.059533333333334, -14.784223809523811 ] } },
+{ "type": "Feature", "properties": { "id": 5.0, "name": "fallen-tree", "description": "Segmented_0_1.png", "polygon_area": "80.5 m²" }, "geometry": { "type": "Point", "coordinates": [ 28.357224770642198, -6.566801376146792 ] } },
+{ "type": "Feature", "properties": { "id": 6.0, "name": "fallen-tree", "description": "Segmented_0_1.png", "polygon_area": "70.26 m²" }, "geometry": { "type": "Point", "coordinates": [ 95.891558823529408, -4.503676470588236 ] } },
+{ "type": "Feature", "properties": { "id": 7.0, "name": "single-tree", "description": "Segmented_0_1.png", "polygon_area": "66.99 m²" }, "geometry": { "type": "Point", "coordinates": [ 83.415185714285727, -38.816960714285727 ] } },
+{ "type": "Feature", "properties": { "id": 8.0, "name": "fallen-tree", "description": "Segmented_0_1.png", "polygon_area": "78.55 m²" }, "geometry": { "type": "Point", "coordinates": [ 91.456246, -19.921876 ] } },
+{ "type": "Feature", "properties": { "id": null, "name": "path", "description": null, "polygon_area": null }, "geometry": { "type": "LineString", "coordinates": [ [ 18.895617818149773, -11.502131171399395 ], [ 45.134168157423971, -53.237924865831857 ] ] } }
+]
+}

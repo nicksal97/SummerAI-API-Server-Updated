@@ -20,4 +20,12 @@ from tree_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
+
+    path('signup/', views.signup_request, name='signup'),
+    path('login/', views.login_request, name='login'),
+    path('model-upload/', views.model_upload, name='model-upload'),
+    path('model-upload1/', views.model_upload1, name='model_upload1'),
+    path('logout/', views.logout_request, name='logout'),
+    path('delete-file/', views.delete_file, name='delete-file'),
+    path('geo-json-path/', views.geo_json_path, name='geo-json-path'),
 ]
