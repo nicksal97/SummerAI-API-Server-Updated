@@ -26,8 +26,26 @@ SECRET_KEY = 'django-insecure-c0ao!%251&wv9cqd)evqo#j%w$zgt561=zk3w4v(0&0ew0s3s(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','http://localhost:5173']
 
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:5173',
+    'http://192.168.50.214:5173',
+    'http://192.168.100.73:5173',
+    'http://192.168.100.11:5173',
+    'http://192.168.50.214:5173',
+]
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:5173',
+    'http://192.168.50.214:5173',
+    'http://192.168.100.73:5173',
+    'http://192.168.100.11:5173',
+    'http://192.168.50.214:5173',
+]
+CORS_ALLOW_CREDENTIALS = True
+# CORS_ALLOW_ALL_ORIGINS = True
+AUTH_USER_MODEL = 'tree_app.CustomUser'
 
 # Application definition
 
@@ -38,13 +56,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tree_app'
+    'tree_app',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
+    # 'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -70,8 +91,14 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'tree_project.wsgi.application'
+DATA_UPLOAD_MAX_MEMORY_SIZE = 99900242880235782652135648235823233353131533535331515335135
 
-DATA_UPLOAD_MAX_NUMBER_FILES = 10000000
+DATA_UPLOAD_MAX_NUMBER_FILES = 99900242880235782652135648235823233353131533535331515335135
+
+# Maximum upload size (in bytes)
+FILE_UPLOAD_MAX_MEMORY_SIZE = 99900242880235782652135648235823233353131533535331515335135  # 1 GB, for example
+# DATA_UPLOAD_MAX_MEMORY_SIZE = 10485760000000  # 1 GB
+
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 

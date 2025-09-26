@@ -1,15 +1,10 @@
 
 from PIL import Image
-from io import BytesIO
 import cv2
-import numpy as np
 from shapely.geometry import Polygon, MultiLineString
 import pygeoops
 from shapely.ops import linemerge
 from helpers import *
-# from ultralytics import YOLO
-# model = YOLO('static/models/germany_summer_ai_model/new_one_last.pt')
-import json
 
 def polygon_area(vertices):
     """Calculate the area of a polygon given its vertices."""
@@ -189,6 +184,4 @@ def prediction(image, model):
         print(str(e))
         return False, '', '', '', '', '', ''
 
-# image = 'static/input_img/2024-08-21_18-56-12/test/output_6.jpeg'
-#
-# prediction(image, model)
+

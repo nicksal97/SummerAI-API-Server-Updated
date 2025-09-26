@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <title>TREE PROJECT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <style>
+    .overlay {
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 999;
+      background: rgba(255,255,255,0.8) url("/static/loader/loading.gif") center no-repeat;
+    }
+    body {
+      text-align: center;
+    }
+    /* Turn off scrollbar when body element has the loading class */
+    body.loading {
+      overflow: hidden;
+    }
+    /* Make spinner image visible when body element has the loading class */
+    body.loading .overlay {
+      display: block;
+    }
+    .ScrollStyle {
+      max-height: 335px;
+      overflow-y: scroll;
+    }
+  </style>
+</head>
+<body>
+<div class="overlay"></div>
+<div class="container">
+  <form id="myForm">
+    <h1 class="text-center">TREE PROJECT</h1><br><br>
+    <div class="form-group">
+      <label for="model">Select Model Type:</label>
+      <select class="form-control" id="model" name="model">
+        <option value="winter">Winter</option>
+        <option value="summer">Summer</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="file">Select Model Path:</label>
+      <input type="file" class="form-control" id="model_path" name="file" accept=".pt">
+    </div>
+    <div class="form-group">
+      <label for="file">Select Zip Folder:</label>
+      <input type="file" class="form-control" id="file" name="file" accept=".zip">
+    </div>
+    <button type="button" class="btn btn-primary" onclick="myFunction()">Submit</button>
+  </form>
+  <br>
+  <div class="container" id="main_container">
+    <div class="row">
+      <div class="col">
+        <h3>Original Images</h3>
+        <div id="original-images" class="ScrollStyle"></div>
+      </div>
+      <div class="col">
+        <h3>Processed Images</h3>
+        <div id="processed-images" class="ScrollStyle"></div>
+       <a id="download-geojson" href="" download="output.geojson" class="btn btn-primary">GeoJSON-Download</a>
+      </div>
+    </div>
+    <div id="model-name" class="text-center mt-3"></div>  <!-- Element to display the selected model name -->
+  </div>
+  <br>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $("#main_container").hide();
+  });
+
+  function myFunction() {
+    var image_path = $("#file").prop('files')[0];
+    var model_path = $("#model_path").prop('files')[0];
+    var selected_model = $("#model").val();
+    if (model_path == undefined) {
+      alert("Please select the model path");
+    }
+
+    if (image_path == undefined) {
+      alert("Please select the file");
+    } else {
+      var form_data = new FormData();
+      form_data.append("file", image_path);
+      form_data.append("model", selected_model);
+      form_data.append("model_path", model_path);
+      $.ajax({
+        url: "/",
+        type: "POST",
+        data: form_data,
+        contentType: false,
+        processData: false,
+        beforeSend: function() {
+          $("body").addClass("loading");
+        },
+        success: function() {
+          console.log("abc");
+        },
+        complete: function(result) {
+          $("body").removeClass("loading");
+<!--          $('#myForm')[0].reset();-->
+          console.log(result['responseJSON']);
+
+          var flag = result['responseJSON']['status'];
+          console.log("Status",flag)
+          if (flag == true) {
+            var geojson_path = result['responseJSON']['geojson_path'];
+            var input_image_list = result['responseJSON']['input_image_list'];
+            var output_image_list = result['responseJSON']['output_image_list'];
+
+            var $originalImages = $('#original-images');
+            var $processedImages = $('#processed-images');
+
+            $originalImages.empty();
+            $processedImages.empty();
+
+            input_image_list.forEach(function(image_path) {
+              var img = $('<img>').attr('src', image_path).addClass('img-fluid mb-2');
+              $originalImages.append(img);
+            });
+
+            output_image_list.forEach(function(image_path) {
+              var img = $('<img>').attr('src', image_path).addClass('img-fluid mb-2');
+              $processedImages.append(img);
+            });
+            $("#download-geojson").attr("href", geojson_path);
+            $("#model-name").text("Model Used: " + selected_model);  // Display the model name directly from the selected value
+
+
+            $("#main_container").show();
+          } else {
+            alert("Please send a valid zip folder");
+          }
+        }
+      });
+    }
+  }
+</script>
+</body>
+</html>
