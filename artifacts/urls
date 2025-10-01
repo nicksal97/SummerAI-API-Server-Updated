@@ -1,0 +1,13 @@
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    # GeoJSON (baseline)
+    path("api/geojson", views.geo_json_path, name="geo_json_path"),
+
+    # History (just list zip files)
+    path("api/zips", views.zips_history, name="zips_history"),
+
+    # Index
+    path("", views.index, name="index"),
+]
