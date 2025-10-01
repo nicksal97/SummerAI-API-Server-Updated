@@ -1,0 +1,22 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+
+# Virtualenvs
+.venv/
+venv/
+.venv310/
+SummerAI-API-Server_new/.venv/
+SummerAI-API-Server_new/.venv310/
+
+# Django
+/static/
+media/
+
+# OS/IDE
+.DS_Store
+*.log
+.idea/
+.vscode/
